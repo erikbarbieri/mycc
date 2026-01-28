@@ -1,0 +1,17 @@
+# build output
+build/
+*.o
+*.obj
+*.exe
+*.out
+
+# debug symbols
+*.pdb
+*.dSYM/
+
+# VS Code
+.vscode/
+
+# MSYS2 / misc
+*.log
+.DS_Store
