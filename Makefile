@@ -1,6 +1,6 @@
 # --- toolchain ---
-CC       := gcc
-CFLAGS   := -std=c11 -Wall -Wextra -Wpedantic -g -O0
+CXX      := clang++
+CXXFLAGS := -std=c++20 -Wall -Wextra -Wpedantic -g -O0
 CPPFLAGS := -Iinclude
 DEPFLAGS := -MMD -MP
 
@@ -9,9 +9,9 @@ SRC_DIR   := src
 BUILD_DIR := build
 TARGET    := $(BUILD_DIR)/mycc.exe
 
-# Find all .c files under src/
-SRCS := $(wildcard $(SRC_DIR)/*.c)
-OBJS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
+# Find all .cpp files under src/
+SRCS := $(wildcard $(SRC_DIR)/*.cpp)
+OBJS := $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SRCS))
 DEPS := $(OBJS:.o=.d)
 
 # Default target
@@ -19,11 +19,11 @@ all: $(TARGET)
 
 # Link
 $(TARGET): $(OBJS) | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -o $@ $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $(OBJS)
 
-# Compile .c -> .o (and generate .d files)
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(DEPFLAGS) -c $< -o $@
+# Compile .cpp -> .o (and generate .d files)
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | $(BUILD_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(DEPFLAGS) -c $< -o $@
 
 # Ensure build directory exists
 $(BUILD_DIR):

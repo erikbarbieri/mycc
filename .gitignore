@@ -4,6 +4,7 @@ build/
 *.obj
 *.exe
 *.out
+*.d
 
 # debug symbols
 *.pdb
