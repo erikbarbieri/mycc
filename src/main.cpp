@@ -13,11 +13,10 @@ int main()
         return 1;
     }
 
-    while(!file.eof())
+    char character;
+    // loop through the file character by character until EOF
+    while(file.get(character))
     {
-        // get() returns an int, not a char
-        char character = static_cast<char>(file.get());
-        
         std::cout << character << "\n";
     }
 }
