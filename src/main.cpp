@@ -20,10 +20,4 @@ int main()
         
         std::cout << character << "\n";
     }
-
-    if (!file.eof())
-    {
-        std::cerr << "Read error occurred\n";
-        return 2;
-    }
 }
