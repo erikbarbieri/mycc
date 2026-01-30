@@ -5,7 +5,7 @@
 int main()
 {
     const std::string path = "tests\\test_code.txt";
-    std::ifstream file(path, std::ios::binary);
+    std::ifstream file(path);
 
     if (!file.is_open())
     {
