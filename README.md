@@ -1,2 +1,3 @@
 # mycc
-A compiler project written in C.
+
+A compiler project written in C++.
