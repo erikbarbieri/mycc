@@ -6,6 +6,9 @@
 
 int main()
 {
+    // this is where output files live, whole folder is ignored in gitignore
+    std::filesystem::create_directories(std::filesystem::current_path() / "tests/outputs");
+
     const std::string inputFileName = "test_code.txt";
     const std::string scannerFileName = "scanner_output.txt";
     const std::filesystem::path inputFilePath =
