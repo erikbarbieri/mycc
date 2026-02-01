@@ -2,23 +2,21 @@
 #include <iostream>
 #include <string>
 #include <filesystem>
+#include "scanner.hpp"
 
 int main()
 {
-    const std::filesystem::path path =
-        std::filesystem::current_path() / "tests" / "test_code.txt";
-    std::ifstream file(path);
+    const std::string inputFileName = "test_code.txt";
+    const std::string scannerFileName = "scanner_output.txt";
+    const std::filesystem::path inputFilePath =
+        std::filesystem::current_path() / "tests" / "inputs" / inputFileName;
+    const std::filesystem::path outputFilePath =
+        std::filesystem::current_path() / "tests" / "outputs" / scannerFileName;
 
-    if (!file.is_open())
+    std::cout << "Scanning: " << inputFileName << " -> " << scannerFileName << "\n";
+    if (!scanFile(inputFilePath, outputFilePath))
     {
-        std::cerr << "Failed to open: " << path << "\n";
-        return 1;
+        std::cerr << "Scanning failed.\n";
     }
-
-    char character;
-    // loop through the file character by character until EOF
-    while (file.get(character))
-    {
-        std::cout << character << "\n";
-    }
+    std::cout << "Scanning success!\n";
 }

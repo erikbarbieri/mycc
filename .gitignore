@@ -6,6 +6,9 @@ build/
 *.out
 *.d
 
+# run output
+tests/outputs/
+
 # debug symbols
 *.pdb
 *.dSYM/
