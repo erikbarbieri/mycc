@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Hello, world!\n");
-    return 0;
-}
+Joe = Sam * Mary / 186 <= 17 /* a comment */ == Bob
