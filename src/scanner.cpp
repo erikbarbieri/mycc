@@ -14,11 +14,12 @@ bool scanFile(const std::filesystem::path &fileInputPath, const std::filesystem:
         return false;
     }
 
-    char character;
+    int character;
     // loop through the file character by character until EOF
-    while (inputFile.get(character))
+    while ((character = inputFile.get()) != EOF)
     {
-        outputFile << character << "\n";
+        char c = static_cast<char>(character);
+        outputFile << c << "\n";
     }
 
     // scan was successful
