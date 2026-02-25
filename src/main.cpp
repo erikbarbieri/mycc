@@ -3,6 +3,9 @@
 #include <string>
 #include <filesystem>
 #include "scanner.hpp"
+#include "parser.hpp"
+#include "semantic_analzyer.hpp"
+#include "code_generator.hpp"
 
 int main()
 {
