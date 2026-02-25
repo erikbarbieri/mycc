@@ -16,6 +16,7 @@ DEPS := $(OBJS:.o=.d)
 
 # Default target
 all: $(TARGET)
+build: $(TARGET)
 
 # Link
 $(TARGET): $(OBJS) | $(BUILD_DIR)
@@ -39,4 +40,4 @@ clean:
 # Include auto-generated dependency files
 -include $(DEPS)
 
-.PHONY: all run clean
+.PHONY: all build run clean
