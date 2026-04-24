@@ -1,6 +1,6 @@
 # mycc
 
-A small multi-pass compiler project for the professor's Java-0-style semester translator.
+A small multi-pass compiler project for Dr. Burris's compiler course.
 
 ## Pipeline
 
@@ -24,12 +24,12 @@ A small multi-pass compiler project for the professor's Java-0-style semester tr
    - Writes `program.asm` and `code_numeric.txt`.
 
 5. **Listings**
-   - Writes `source_listing.txt`, `code_listing.txt`, and `LinuxCompileScript.sh`.
+   - Writes `source_listing.txt` and `code_listing.txt`.
 
 ## Build
 
 ```sh
-make
+make run
 ```
 
 The compiler executable is:
