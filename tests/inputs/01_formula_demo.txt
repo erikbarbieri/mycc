@@ -1,0 +1,10 @@
+CLASS FormulaDemo {
+CONST C = 3;
+VAR A, B, BOB, JANE, ANS;
+CALL ReadInteger(A);
+CALL ReadInteger(B);
+CALL ReadInteger(BOB);
+CALL ReadInteger(JANE);
+ANS = A * ((BOB + JANE - 10) / 2 * 4) / (B + C);
+CALL print(ANS)
+}

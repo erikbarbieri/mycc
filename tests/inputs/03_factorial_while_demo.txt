@@ -1,0 +1,10 @@
+CLASS FactorialWhile {
+VAR N, FACT;
+CALL ReadInteger(N);
+FACT = 1;
+WHILE N > 1 DO {
+FACT = FACT * N;
+N = N - 1
+};
+CALL print(FACT)
+}

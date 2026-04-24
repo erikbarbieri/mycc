@@ -1,0 +1,12 @@
+CLASS LargestThree {
+VAR A, B, C, BIG;
+CALL ReadInteger(A);
+CALL ReadInteger(B);
+CALL ReadInteger(C);
+IF A >= B THEN {
+IF A >= C THEN BIG = A ELSE BIG = C
+} ELSE {
+IF B >= C THEN BIG = B ELSE BIG = C
+};
+CALL print(BIG)
+}

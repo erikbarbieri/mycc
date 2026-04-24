@@ -1,0 +1,7 @@
+CLASS LargestTwo {
+VAR X, Y, BIG;
+CALL ReadInteger(X);
+CALL ReadInteger(Y);
+IF X >= Y THEN BIG = X ELSE BIG = Y;
+CALL print(BIG)
+}

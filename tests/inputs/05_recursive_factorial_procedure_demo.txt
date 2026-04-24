@@ -1,0 +1,14 @@
+CLASS RecursiveFactorial {
+VAR N, NFACT;
+PROCEDURE Factorial() {
+IF N > 1 THEN {
+NFACT = NFACT * N;
+N = N - 1;
+CALL Factorial()
+}
+}
+CALL ReadInteger(N);
+NFACT = 1;
+CALL Factorial();
+CALL print(NFACT)
+}

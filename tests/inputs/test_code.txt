@@ -1,1 +1,10 @@
-Joe = Sam * Mary / 186 <= 17 /* a comment */ == Bob
+CLASS ArraySum {
+VAR ARR[5], I, SUM;
+I = 0;
+WHILE I < 5 DO {
+CALL ReadInteger(ARR[I]);
+I = I + 1
+};
+SUM = ARR[0] + ARR[1] + ARR[2] + ARR[3] + ARR[4];
+CALL print(SUM)
+}
