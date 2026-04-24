@@ -19,3 +19,24 @@ tests/outputs/
 # MSYS2 / misc
 *.log
 .DS_Store
+
+# editor / IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# compile tooling
+compile_commands.json
+.cache/
+.clangd/
+
+# profiling / coverage
+*.gcda
+*.gcno
+*.gcov
+coverage/
+
+# temporary files
+tmp/
+temp/
