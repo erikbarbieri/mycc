@@ -1,6 +1,6 @@
 # mycc
 
-A small multi-pass compiler project for Dr. Burris's translator semester project.
+A small multi-pass compiler for Dr. Burris's Spring 2026 COSC 4316 01 Compiler Design and Construction course.
 
 ## Pipeline
 
