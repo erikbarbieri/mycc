@@ -1330,6 +1330,16 @@ enum ParserProduction {
     PROD_ELSE_PART_TO_EPSILON
 };
 
+// Statement-level PDA table here,
+// Rows are ParserNonterminal values:
+//   NT_STATEMENT_LIST, NT_STATEMENT_LIST_TAIL, NT_STATEMENT, NT_ELSE_PART
+
+// Columns are ParserLookaheadClass values:
+//   invalid, assignment, call, compound, if, while, semicolon, stop, else
+
+// Each entry selects a production for the stack-driven statement parser.
+// Semantic action entries call the expression/operator-precedence PDA when
+// assignments, IF/WHILE conditions, calls, or array subscripts are encountered
 static const ParserProduction PARSER_TABLE[NT_COUNT][LOOK_COUNT] = {
     // NT_STATEMENT_LIST
     {PROD_INVALID, PROD_STATEMENT_LIST_TO_STATEMENT_TAIL, PROD_STATEMENT_LIST_TO_STATEMENT_TAIL,
