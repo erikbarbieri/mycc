@@ -1,6 +1,6 @@
 # mycc
 
-A small multi-pass compiler project for the professor's Java-0-style semester translator.
+A small multi-pass compiler project for Dr. Burris's translator semester project.
 
 ## Pipeline
 
@@ -24,12 +24,12 @@ A small multi-pass compiler project for the professor's Java-0-style semester tr
    - Writes `program.asm` and `code_numeric.txt`.
 
 5. **Listings**
-   - Writes `source_listing.txt`, `code_listing.txt`, and `LinuxCompileScript.sh`.
+   - Writes `source_listing.txt` and `code_listing.txt`.
 
 ## Build
 
 ```sh
-make
+make run
 ```
 
 The compiler executable is:
@@ -47,12 +47,6 @@ tests/inputs/test_code.txt
 ```
 
 To run one of the included demos, copy it over `test_code.txt` and run the compiler.
-For example:
-
-```sh
-cp tests/inputs/05_recursive_factorial_procedure_demo.txt tests/inputs/test_code.txt
-./build/mycc.exe
-```
 
 Generated files are written into:
 
@@ -62,9 +56,9 @@ tests/outputs/
 
 ## Included demo set
 
-- `01_formula_demo.txt` — arithmetic / CONST / VAR / integer I/O
-- `02_largest_of_two_demo.txt` — IF / ELSE / relational operators
-- `03_factorial_while_demo.txt` — WHILE
-- `04_largest_of_three_nested_if_demo.txt` — nested IF
-- `05_recursive_factorial_procedure_demo.txt` — procedure call + recursion
-- `06_array_sum_demo.txt` — subscripted variables / arrays
+- `01_formula_demo.txt` - arithmetic / CONST / VAR / integer I/O
+- `02_largest_of_two_demo.txt` - IF / ELSE / relational operators
+- `03_factorial_while_demo.txt` - WHILE
+- `04_largest_of_three_nested_if_demo.txt` - nested IF
+- `05_recursive_factorial_procedure_demo.txt` - procedure call + recursion
+- `06_array_sum_demo.txt` - subscripted variables / arrays
