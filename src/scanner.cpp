@@ -202,6 +202,14 @@ static bool readChar(std::ifstream& inputFile, char& c) {
     if (g_hasPendingChar) {
         c = g_pendingChar;
         g_hasPendingChar = false;
+
+        // A pushed-back newline must count as a newline again when it is
+        // consumed later. Otherwise the scanner falls one line behind after
+        // an identifier or integer is followed by a newline.
+        if (c == '\n') {
+            g_currentLine++;
+        }
+
         return true;
     }
 
