@@ -1,10 +1,12 @@
 ## Demo!! (GIF takes a few seconds to load)
 
+Source -> quads -> x86 assembly -> a working program!!
+
 ![Animated demo of mycc compiling a factorial program: source listing, intermediate quads, generated x86 instructions, and a terminal showing 5 factorial equals 120](assets/compiler-demo.gif)
 
-*The GIF above takes a moment to load! It's a slideshow of a few output screenshots when I compiled and ran a test program with my compiler. Source -> quads -> x86 assembly -> a working program. IT FINALLY WORKS!!*
+*It's a slideshow of a few output screenshots when I compiled and ran a test program with my compiler. IT FINALLY WORKS!!*
 
-*I deliberately skipped a few output steps in the GIF, but they're still generated and used when ran, it's just faster/easier to view it working this way!*
+*I deliberately skipped a few in-between steps in the GIF, but they're still generated and used when ran, it's just faster/easier to view it working this way!*
 
 # mycc - my little compiler with big ambitions :)
 
@@ -20,13 +22,13 @@ The example below computes a factorial using a `WHILE` loop. Enter **5**, and th
 
 ![Source listing for a factorial program in the custom language](assets/factorial-source-listing.png)
 
-<p align="center">⬇️ <strong>Compile it!</strong> ⬇️</p>
+<p align="center"><strong>Compile it!</strong></p>
 
 **2. Generate x86 instructions** - the compiler translates that loop into operations like `mov`, `cmp`, `jle`, and `mul`. This is its address-annotated instruction listing; it also writes an actual <code>program.asm</code> file.
 
 ![Generated x86 assembly instruction listing for the factorial loop](assets/factorial-assembly-instructions.png)
 
-<p align="center">⬇️ <strong>Assemble + link + run!</strong> ⬇️</p>
+<p align="center"><strong>Assemble + link + run!</strong></p>
 
 **3. Get the answer** - the terminal shows the compiler, NASM assembler, linker, and finally the generated executable producing a result!!!
 
