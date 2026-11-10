@@ -8,7 +8,7 @@ Source -> quads -> x86 assembly -> a working program!!
 
 *I deliberately skipped a few in-between steps in the GIF, but they're still generated and used when ran, it's just faster/easier to view it working this way!*
 
-# mycc - my little compiler with big ambitions :)
+# mycc - my little C-like compiler!! :3
 
 **A compiler built from scratch in C++20** for a small custom C-like programming language. It takes human-readable code, analyzes it in stages, generates **NASM-compatible x86 assembly**, and can produce a runnable Linux program! No magic, just a lot of careful translating and state machines!! :)
 
